@@ -1,0 +1,34 @@
+.main-header {
+	height: 200px;
+	padding: 0 160px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	.logo {
+		width: 160px;
+		padding: 20px 0;
+		
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.main-menu {
+		display: flex;
+		padding: 60px 0;
+		list-style-type: none;
+
+		li {
+			margin-left: 30px;
+
+			a {
+				color: $brand-color;
+				text-decoration: none;
+				text-transform: capitalize;
+				font-family: $font-family-base;				
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+@import 'vendor/normalize';
+@import 'vendor/flickity';
+@import 'vendor/font-awesome';
+
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/fonts';
+@import 'partials/typography';
+@import 'partials/buttons';
+
+@import 'modules/header';
+@import 'modules/home';
+@import 'modules/slideshow';
+@import 'modules/footer';
+
+html {
+	box-sizing: border-box;
+}
+
+body {	
+	font-size: 24px;
+	color: $brand-color;
+	font-family: $font-family-base;
+}

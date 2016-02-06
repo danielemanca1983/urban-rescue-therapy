@@ -1,0 +1,38 @@
+.home-slider {
+	width: 100%;
+	height: 850px;
+	position: relative;
+
+	.slide {
+		width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        background-size: cover;        
+        background-position: center center;
+
+        &:after {			
+			top: 0;			
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			content: "";
+			position: absolute;
+			background: rgba(0, 0, 0, 0.6);
+        }
+	}
+
+	.flickity-page-dots {
+		top: 80px;
+		right: 160px;
+		text-align: right;
+
+		.dot {
+			width: 20px;
+			height: 20px;
+			background: white;
+		}
+	}
+
+}
