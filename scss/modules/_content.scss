@@ -1,0 +1,111 @@
+.banner {
+	height: 800px;
+	background-size: cover;
+	background-position: center;
+}
+
+.content {
+	padding: 100px 160px;
+	line-height: 1.5;
+
+	h1 {
+		margin: 0;
+	}
+
+	ul {
+		list-style: none;
+
+		li {
+			&:before {
+				content: "-";
+				padding-right: 10px;
+			}
+		}
+	}
+
+	.flex-wrapper {
+		display: flex;
+		margin-top: 20px;
+
+		.column {
+			flex: 1 42.5%;
+
+			&:first-child {
+				margin-right: 7.5%;
+			}
+
+			&:last-child {
+				margin-left: 7.5%;
+			}
+		}
+
+		.fare {
+			flex: 1 49%;
+			height: 600px;
+			display:flex;
+			position: relative;
+			background-size: cover;
+			background-position: center;
+			
+
+			.text {
+				z-index: 2;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				h3 {
+					color: white;
+					text-align: center;
+					text-shadow: 1px 1px 1px black;
+				}
+			}
+
+			.hover {
+				display: none;
+			}
+
+			&:first-child {
+				margin-right: 1%;
+			}
+
+			&:last-child {
+				margin-left: 1%;
+			}
+
+			&:after {
+				top: 0;			
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 1;
+				content: "";
+				position: absolute;
+				background: rgba(0, 0, 0, 0.6);
+				transition: all .5s ease-in;
+			}
+
+			&:hover:after {
+				background: rgba(255, 255, 255, 0.6);
+			}
+
+			&:hover .hover {
+				display: flex;
+
+				h3 {
+					color: $brand-color;
+					text-shadow: none;
+				}
+			}
+
+			&:hover .hide-hover {
+				display: none;
+			}
+		}
+	}
+}

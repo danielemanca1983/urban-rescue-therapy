@@ -1,28 +1,15 @@
 {
   "name": "urban-rescue-therapy",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/danielemanca1983/urban-rescue-therapy.git"
-  },
-  "author": "Daniele Manca",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/danielemanca1983/urban-rescue-therapy/issues"
-  },
-  "homepage": "https://github.com/danielemanca1983/urban-rescue-therapy#readme",
+  "version": "0.1.0",
   "devDependencies": {
-    "browser-sync": "^2.11.1",
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.1"
+    "grunt": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "time-grunt" : "latest",
+    "jit-grunt": "latest"
   }
 }

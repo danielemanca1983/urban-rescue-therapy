@@ -1,0 +1,27 @@
+form {
+	display: flex;
+	flex-direction: column;
+	
+	label {
+		margin-bottom: 10px;
+	}
+
+	input {
+		height: 55px;
+		margin-bottom: 20px;
+	}
+
+	input, textarea {
+		border: 2px solid $brand-color;
+	}
+
+	textarea {
+		height: 200px;
+		margin-bottom: 70px;
+	}
+
+	input[type="submit"] {
+		width: 300px;
+		background-color: white;
+	}
+}
