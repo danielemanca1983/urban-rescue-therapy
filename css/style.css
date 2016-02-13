@@ -4036,28 +4036,18 @@ p {
 }
 
 /* line 1, ../scss/partials/_buttons.scss */
-.button-group {
-  height: 60px;
-  margin-top: 10px;
-  box-sizing: border-box;
-}
-/* line 6, ../scss/partials/_buttons.scss */
-.button-group .btn {
-  border: none;
-  height: 100%;
-  padding: 0 20px;
-  margin-right: 10px;
-  border-radius: 4px;
+.btn {
+  left: 50%;
+  bottom: -30px;
+  font-size: 18px;
+  padding: 5px 20px;
+  position: absolute;
+  color: #391614;
   text-decoration: none;
-  background-color: white;
-  text-transform: uppercase;
-}
-/* line 16, ../scss/partials/_buttons.scss */
-.button-group .btn.transparent {
-  color: white;
-  border: 2px solid white;
-  margin-left: 10px;
-  background-color: transparent;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 2px solid #391614;
 }
 
 /* line 1, ../scss/partials/_forms.scss */
@@ -4153,7 +4143,12 @@ form input[type="submit"] {
 .main h1 {
   text-align: center;
 }
-/* line 6, ../scss/modules/_home.scss */
+/* line 5, ../scss/modules/_home.scss */
+.main h1.align-left {
+  text-align: left;
+  padding-left: 160px;
+}
+/* line 10, ../scss/modules/_home.scss */
 .main .main-content {
   font-size: 24px;
   line-height: 1.5;
@@ -4167,11 +4162,11 @@ form input[type="submit"] {
   -webkit-column-gap: 260px;
 }
 
-/* line 20, ../scss/modules/_home.scss */
+/* line 24, ../scss/modules/_home.scss */
 .treatments h2 {
   text-align: center;
 }
-/* line 23, ../scss/modules/_home.scss */
+/* line 27, ../scss/modules/_home.scss */
 .treatments .treatments-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4181,25 +4176,32 @@ form input[type="submit"] {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
-/* line 27, ../scss/modules/_home.scss */
+/* line 31, ../scss/modules/_home.scss */
 .treatments .treatments-container .treatment {
   -webkit-box-flex: 1;
   -webkit-flex: 1 23%;
       -ms-flex: 1 23%;
           flex: 1 23%;
-  margin: 0 10px;
+  margin: 0 10px 80px;
+  text-align: center;
+  position: relative;
 }
-/* line 31, ../scss/modules/_home.scss */
+/* line 37, ../scss/modules/_home.scss */
 .treatments .treatments-container .treatment .treatment-thumb {
   height: 310px;
   background-size: cover;
   background-position: center;
 }
-/* line 37, ../scss/modules/_home.scss */
+/* line 43, ../scss/modules/_home.scss */
 .treatments .treatments-container .treatment .treatment-title {
   font-size: 30px;
   text-align: center;
   font-family: "levenim_mtregular", sans-serif;
+}
+/* line 49, ../scss/modules/_home.scss */
+.treatments .treatments-container .treatment .excerpt {
+  font-size: 18px;
+  text-align: left;
 }
 
 /* line 1, ../scss/modules/_slideshow.scss */
@@ -4412,7 +4414,7 @@ form input[type="submit"] {
   -webkit-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  padding: 50px 0;
+  padding: 15px 0;
   text-align: center;
 }
 /* line 27, ../scss/modules/_footer.scss */
@@ -4446,19 +4448,88 @@ form input[type="submit"] {
 }
 /* line 51, ../scss/modules/_footer.scss */
 .main-footer .footer-copyright {
-  padding: 90px 0;
+  padding: 65px 0;
 }
 /* line 53, ../scss/modules/_footer.scss */
 .main-footer .footer-copyright p {
   text-align: right;
 }
 
-/* line 18, ../scss/style.scss */
+/* line 1, ../scss/modules/_overlay.scss */
+.outer {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+  position: fixed !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 13, ../scss/modules/_overlay.scss */
+.outer.active {
+  display: block;
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible;
+}
+/* line 20, ../scss/modules/_overlay.scss */
+.outer .overlay {
+  top: 10%;
+  left: 50%;
+  bottom: 5%;
+  padding: 100px;
+  overflow: hidden;
+  min-width: 780px;
+  background: white;
+  position: absolute;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+/* line 32, ../scss/modules/_overlay.scss */
+.outer .overlay .close-icon {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  margin: 40px;
+  display: block;
+  float: right;
+  z-index: 1;
+}
+/* line 41, ../scss/modules/_overlay.scss */
+.outer .overlay .close-icon:before, .outer .overlay .close-icon:after {
+  position: absolute;
+  height: 2px;
+  width: 40px;
+  display: block;
+  background: #391614;
+  content: '';
+  top: 19px;
+  left: 0;
+}
+/* line 52, ../scss/modules/_overlay.scss */
+.outer .overlay .close-icon:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+/* line 56, ../scss/modules/_overlay.scss */
+.outer .overlay .close-icon:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* line 19, ../scss/style.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 22, ../scss/style.scss */
+/* line 23, ../scss/style.scss */
 body {
   font-size: 24px;
   color: #391614;

@@ -2,6 +2,10 @@
 	width: 100%;
 	h1 {
 		text-align: center;
+		&.align-left {
+			text-align: left;
+			padding-left: 160px;
+		}
 	}
 	.main-content {
 		font-size: 24px;
@@ -26,7 +30,9 @@
 
 		.treatment {
 			flex: 1 23%;
-			margin: 0 10px;
+			margin: 0 10px 80px;
+			text-align: center;
+			position: relative;
 
 			.treatment-thumb {
 				height: 310px;
@@ -38,6 +44,11 @@
 				font-size: 30px;
 				text-align: center;
 				font-family: $font-family-base;
+			}
+
+			.excerpt {
+				font-size: 18px;
+				text-align: left;
 			}
 		}
 	}
