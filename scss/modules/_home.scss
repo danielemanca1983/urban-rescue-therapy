@@ -15,7 +15,16 @@
 		column-count: 2;
 		-webkit-column-count: 2;
 		column-gap: 250px;
-		-webkit-column-gap: 260px;
+		-webkit-column-gap: 250px;
+
+		@include until($tablet) {
+			padding: 0 20px;
+			font-size: 18px;
+			column-count: 1;
+			-webkit-column-count: 1;
+			column-gap: 0;
+			-webkit-column-gap: 0;
+		}
 	}
 	
 }
@@ -28,11 +37,19 @@
 		display: flex;
 		flex-wrap: wrap;
 
+		@include until($tablet) {
+			flex-direction: column;
+		}
+
 		.treatment {
 			flex: 1 23%;
 			margin: 0 10px 80px;
 			text-align: center;
 			position: relative;
+
+			@include until($tablet) {
+				margin-bottom: 20px;
+			}
 
 			.treatment-thumb {
 				height: 310px;

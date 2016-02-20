@@ -6,6 +6,11 @@
 	padding: 0 160px;
 	background-color: $footer-bg;
 
+	@include until($tablet) {
+		height: auto;
+		flex-direction: column;
+	}
+
 	.footer-container {
 		flex: 1;
 	}
@@ -16,6 +21,10 @@
 			width: 100%;
 			height: auto;
 			max-width: 160px;
+		}
+
+		@include until($tablet) {
+			text-align: center;
 		}
 	}
 
@@ -50,6 +59,10 @@
 
 	.footer-copyright {
 		padding: 65px 0;
+
+		@include until($tablet) {
+			padding: 35px 0;
+		}
 		p {
 			text-align: right;
 		}

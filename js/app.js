@@ -2,5 +2,6 @@
 
 $('.home-slider').flickity({
   prevNextButtons: false,
-  contain: true
+  contain: true,
+  autoPlay: true
 });

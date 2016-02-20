@@ -4009,28 +4009,40 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 60px;
 }
-
-/* line 10, ../scss/partials/_typography.scss */
-h2 {
-  font-size: 50px;
+@media screen and (max-width: 767px) {
+  /* line 6, ../scss/partials/_typography.scss */
+  h1 {
+    font-size: 45px;
+  }
 }
 
 /* line 14, ../scss/partials/_typography.scss */
+h2 {
+  font-size: 50px;
+}
+@media screen and (max-width: 767px) {
+  /* line 14, ../scss/partials/_typography.scss */
+  h2 {
+    font-size: 35px;
+  }
+}
+
+/* line 22, ../scss/partials/_typography.scss */
 h3 {
   font-size: 40px;
 }
 
-/* line 18, ../scss/partials/_typography.scss */
+/* line 26, ../scss/partials/_typography.scss */
 h4 {
   font-size: 30px;
 }
 
-/* line 22, ../scss/partials/_typography.scss */
+/* line 30, ../scss/partials/_typography.scss */
 h5 {
   font-size: 20px;
 }
 
-/* line 26, ../scss/partials/_typography.scss */
+/* line 34, ../scss/partials/_typography.scss */
 p {
   margin-bottom: 1em;
 }
@@ -4159,14 +4171,27 @@ form input[type="submit"] {
   -webkit-column-count: 2;
   -moz-column-gap: 250px;
        column-gap: 250px;
-  -webkit-column-gap: 260px;
+  -webkit-column-gap: 250px;
+}
+@media screen and (max-width: 767px) {
+  /* line 10, ../scss/modules/_home.scss */
+  .main .main-content {
+    padding: 0 20px;
+    font-size: 18px;
+    -moz-column-count: 1;
+         column-count: 1;
+    -webkit-column-count: 1;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    -webkit-column-gap: 0;
+  }
 }
 
-/* line 24, ../scss/modules/_home.scss */
+/* line 33, ../scss/modules/_home.scss */
 .treatments h2 {
   text-align: center;
 }
-/* line 27, ../scss/modules/_home.scss */
+/* line 36, ../scss/modules/_home.scss */
 .treatments .treatments-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4176,7 +4201,17 @@ form input[type="submit"] {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
-/* line 31, ../scss/modules/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 36, ../scss/modules/_home.scss */
+  .treatments .treatments-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/* line 44, ../scss/modules/_home.scss */
 .treatments .treatments-container .treatment {
   -webkit-box-flex: 1;
   -webkit-flex: 1 23%;
@@ -4186,19 +4221,25 @@ form input[type="submit"] {
   text-align: center;
   position: relative;
 }
-/* line 37, ../scss/modules/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 44, ../scss/modules/_home.scss */
+  .treatments .treatments-container .treatment {
+    margin-bottom: 20px;
+  }
+}
+/* line 54, ../scss/modules/_home.scss */
 .treatments .treatments-container .treatment .treatment-thumb {
   height: 310px;
   background-size: cover;
   background-position: center;
 }
-/* line 43, ../scss/modules/_home.scss */
+/* line 60, ../scss/modules/_home.scss */
 .treatments .treatments-container .treatment .treatment-title {
   font-size: 30px;
   text-align: center;
   font-family: "levenim_mtregular", sans-serif;
 }
-/* line 49, ../scss/modules/_home.scss */
+/* line 66, ../scss/modules/_home.scss */
 .treatments .treatments-container .treatment .excerpt {
   font-size: 18px;
   text-align: left;
@@ -4210,7 +4251,13 @@ form input[type="submit"] {
   height: 850px;
   position: relative;
 }
-/* line 6, ../scss/modules/_slideshow.scss */
+@media screen and (max-width: 767px) {
+  /* line 1, ../scss/modules/_slideshow.scss */
+  .home-slider {
+    height: 400px;
+  }
+}
+/* line 10, ../scss/modules/_slideshow.scss */
 .home-slider .slide {
   width: 100%;
   height: 100%;
@@ -4219,7 +4266,7 @@ form input[type="submit"] {
   background-size: cover;
   background-position: center center;
 }
-/* line 14, ../scss/modules/_slideshow.scss */
+/* line 18, ../scss/modules/_slideshow.scss */
 .home-slider .slide:after {
   top: 0;
   left: 0;
@@ -4230,17 +4277,31 @@ form input[type="submit"] {
   position: absolute;
   background: rgba(0, 0, 0, 0.6);
 }
-/* line 26, ../scss/modules/_slideshow.scss */
+/* line 30, ../scss/modules/_slideshow.scss */
 .home-slider .flickity-page-dots {
   top: 80px;
   right: 160px;
   text-align: right;
 }
-/* line 31, ../scss/modules/_slideshow.scss */
+@media screen and (max-width: 767px) {
+  /* line 30, ../scss/modules/_slideshow.scss */
+  .home-slider .flickity-page-dots {
+    top: 20px;
+    right: 20px;
+  }
+}
+/* line 40, ../scss/modules/_slideshow.scss */
 .home-slider .flickity-page-dots .dot {
   width: 20px;
   height: 20px;
   background: white;
+}
+@media screen and (max-width: 767px) {
+  /* line 40, ../scss/modules/_slideshow.scss */
+  .home-slider .flickity-page-dots .dot {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 /* line 1, ../scss/modules/_content.scss */
@@ -4391,24 +4452,41 @@ form input[type="submit"] {
   padding: 0 160px;
   background-color: #90817f;
 }
-/* line 9, ../scss/modules/_footer.scss */
+@media screen and (max-width: 767px) {
+  /* line 1, ../scss/modules/_footer.scss */
+  .main-footer {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/* line 14, ../scss/modules/_footer.scss */
 .main-footer .footer-container {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
-/* line 13, ../scss/modules/_footer.scss */
+/* line 18, ../scss/modules/_footer.scss */
 .main-footer .footer-logo {
   padding: 20px 0;
 }
-/* line 15, ../scss/modules/_footer.scss */
+/* line 20, ../scss/modules/_footer.scss */
 .main-footer .footer-logo img {
   width: 100%;
   height: auto;
   max-width: 160px;
 }
-/* line 22, ../scss/modules/_footer.scss */
+@media screen and (max-width: 767px) {
+  /* line 18, ../scss/modules/_footer.scss */
+  .main-footer .footer-logo {
+    text-align: center;
+  }
+}
+/* line 31, ../scss/modules/_footer.scss */
 .main-footer .footer-social {
   -webkit-box-flex: 2;
   -webkit-flex: 2;
@@ -4417,7 +4495,7 @@ form input[type="submit"] {
   padding: 15px 0;
   text-align: center;
 }
-/* line 27, ../scss/modules/_footer.scss */
+/* line 36, ../scss/modules/_footer.scss */
 .main-footer .footer-social .social-nav {
   padding: 0;
   margin: 10px auto 0;
@@ -4432,25 +4510,31 @@ form input[type="submit"] {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-/* line 35, ../scss/modules/_footer.scss */
+/* line 44, ../scss/modules/_footer.scss */
 .main-footer .footer-social .social-nav li {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: 2px solid white;
 }
-/* line 41, ../scss/modules/_footer.scss */
+/* line 50, ../scss/modules/_footer.scss */
 .main-footer .footer-social .social-nav li a {
   color: white;
   padding: 10px;
   font-size: 30px;
   line-height: 50px;
 }
-/* line 51, ../scss/modules/_footer.scss */
+/* line 60, ../scss/modules/_footer.scss */
 .main-footer .footer-copyright {
   padding: 65px 0;
 }
-/* line 53, ../scss/modules/_footer.scss */
+@media screen and (max-width: 767px) {
+  /* line 60, ../scss/modules/_footer.scss */
+  .main-footer .footer-copyright {
+    padding: 35px 0;
+  }
+}
+/* line 66, ../scss/modules/_footer.scss */
 .main-footer .footer-copyright p {
   text-align: right;
 }

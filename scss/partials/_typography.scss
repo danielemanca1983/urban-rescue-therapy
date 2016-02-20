@@ -5,10 +5,18 @@ h1, h2, h3, h4, h5 {
 
 h1 {
 	font-size: 60px;
+
+	@include until($tablet) {
+		font-size: 45px;
+	}
 }
 
 h2 {
 	font-size: 50px;
+
+	@include until($tablet) {
+		font-size: 35px;
+	}
 }
 
 h3 {
