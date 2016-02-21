@@ -2,11 +2,27 @@
 	height: 800px;
 	background-size: cover;
 	background-position: center;
+
+	@include until($tablet) {
+		height: 400px;
+	}
+
+	@include between($tablet, $medium-desktop) {
+		height: 500px;
+	}
 }
 
 .content {
 	padding: 100px 160px;
 	line-height: 1.5;
+
+	@include until($tablet) {
+		padding: 50px 20px;
+	}
+
+	@include between($tablet, $medium-desktop) {
+		padding: 60px 30px;
+	}
 
 	h1 {
 		margin: 0;
@@ -27,15 +43,26 @@
 		display: flex;
 		margin-top: 20px;
 
+		@include until($small-desktop) {
+			flex-direction: column;
+		}
+
 		.column {
 			flex: 1 42.5%;
 
 			&:first-child {
 				margin-right: 7.5%;
+
+				@include until($small-desktop) {
+					margin-right: 0;
+				}
 			}
 
 			&:last-child {
 				margin-left: 7.5%;
+				@include until($small-desktop) {
+					margin-left: 0;
+				}
 			}
 		}
 
@@ -72,10 +99,17 @@
 
 			&:first-child {
 				margin-right: 1%;
+				@include until($tablet) {
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
 			}
 
 			&:last-child {
 				margin-left: 1%;
+				@include until($tablet) {
+					margin-left: 0;
+				}
 			}
 
 			&:after {

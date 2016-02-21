@@ -7,6 +7,10 @@
 		height: 400px;
 	}
 
+	@include between($tablet, $small-desktop) {
+		height: 500px;
+	}
+
 	.slide {
 		width: 100%;
         height: 100%;
@@ -32,9 +36,14 @@
 		right: 160px;
 		text-align: right;
 
-		@include until($tablet) {
+		@include between($mobile, $small-desktop) {
 			top: 20px;
 			right: 20px;
+		}
+
+		@include between($small-desktop, $medium-desktop) {
+			top: 40px;
+			right: 80px;
 		}
 
 		.dot {

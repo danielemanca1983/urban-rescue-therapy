@@ -4116,17 +4116,36 @@ form input[type="submit"] {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-/* line 8, ../scss/modules/_header.scss */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 1, ../scss/modules/_header.scss */
+  .main-header {
+    height: 120px;
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1174px) {
+  /* line 1, ../scss/modules/_header.scss */
+  .main-header {
+    padding: 0 80px;
+  }
+}
+/* line 18, ../scss/modules/_header.scss */
 .main-header .logo {
   width: 160px;
   padding: 20px 0;
 }
-/* line 12, ../scss/modules/_header.scss */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 18, ../scss/modules/_header.scss */
+  .main-header .logo {
+    width: 80px;
+  }
+}
+/* line 26, ../scss/modules/_header.scss */
 .main-header .logo img {
   width: 100%;
   height: auto;
 }
-/* line 18, ../scss/modules/_header.scss */
+/* line 32, ../scss/modules/_header.scss */
 .main-header .main-menu {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4135,11 +4154,23 @@ form input[type="submit"] {
   padding: 60px 0;
   list-style-type: none;
 }
-/* line 23, ../scss/modules/_header.scss */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 32, ../scss/modules/_header.scss */
+  .main-header .main-menu {
+    padding: 30px 0;
+  }
+}
+/* line 41, ../scss/modules/_header.scss */
 .main-header .main-menu li {
   margin-left: 30px;
 }
-/* line 26, ../scss/modules/_header.scss */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 41, ../scss/modules/_header.scss */
+  .main-header .main-menu li {
+    margin-left: 20px;
+  }
+}
+/* line 48, ../scss/modules/_header.scss */
 .main-header .main-menu li a {
   color: #391614;
   text-decoration: none;
@@ -4160,7 +4191,20 @@ form input[type="submit"] {
   text-align: left;
   padding-left: 160px;
 }
-/* line 10, ../scss/modules/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 5, ../scss/modules/_home.scss */
+  .main h1.align-left {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 5, ../scss/modules/_home.scss */
+  .main h1.align-left {
+    padding-left: 30px;
+  }
+}
+/* line 18, ../scss/modules/_home.scss */
 .main .main-content {
   font-size: 24px;
   line-height: 1.5;
@@ -4174,7 +4218,7 @@ form input[type="submit"] {
   -webkit-column-gap: 250px;
 }
 @media screen and (max-width: 767px) {
-  /* line 10, ../scss/modules/_home.scss */
+  /* line 18, ../scss/modules/_home.scss */
   .main .main-content {
     padding: 0 20px;
     font-size: 18px;
@@ -4186,12 +4230,21 @@ form input[type="submit"] {
     -webkit-column-gap: 0;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 18, ../scss/modules/_home.scss */
+  .main .main-content {
+    padding: 0 15px;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    -webkit-column-gap: 100px;
+  }
+}
 
-/* line 33, ../scss/modules/_home.scss */
+/* line 47, ../scss/modules/_home.scss */
 .treatments h2 {
   text-align: center;
 }
-/* line 36, ../scss/modules/_home.scss */
+/* line 50, ../scss/modules/_home.scss */
 .treatments .treatments-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4202,7 +4255,7 @@ form input[type="submit"] {
           flex-wrap: wrap;
 }
 @media screen and (max-width: 767px) {
-  /* line 36, ../scss/modules/_home.scss */
+  /* line 50, ../scss/modules/_home.scss */
   .treatments .treatments-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4211,7 +4264,7 @@ form input[type="submit"] {
             flex-direction: column;
   }
 }
-/* line 44, ../scss/modules/_home.scss */
+/* line 58, ../scss/modules/_home.scss */
 .treatments .treatments-container .treatment {
   -webkit-box-flex: 1;
   -webkit-flex: 1 23%;
@@ -4222,24 +4275,34 @@ form input[type="submit"] {
   position: relative;
 }
 @media screen and (max-width: 767px) {
-  /* line 44, ../scss/modules/_home.scss */
+  /* line 58, ../scss/modules/_home.scss */
   .treatments .treatments-container .treatment {
-    margin-bottom: 20px;
+    min-height: 300px;
   }
 }
-/* line 54, ../scss/modules/_home.scss */
+@media screen and (min-width: 768px) and (max-width: 1174px) {
+  /* line 58, ../scss/modules/_home.scss */
+  .treatments .treatments-container .treatment {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 46%;
+        -ms-flex: 1 46%;
+            flex: 1 46%;
+    min-height: 300px;
+  }
+}
+/* line 74, ../scss/modules/_home.scss */
 .treatments .treatments-container .treatment .treatment-thumb {
   height: 310px;
   background-size: cover;
   background-position: center;
 }
-/* line 60, ../scss/modules/_home.scss */
+/* line 81, ../scss/modules/_home.scss */
 .treatments .treatments-container .treatment .treatment-title {
   font-size: 30px;
   text-align: center;
   font-family: "levenim_mtregular", sans-serif;
 }
-/* line 66, ../scss/modules/_home.scss */
+/* line 87, ../scss/modules/_home.scss */
 .treatments .treatments-container .treatment .excerpt {
   font-size: 18px;
   text-align: left;
@@ -4257,7 +4320,13 @@ form input[type="submit"] {
     height: 400px;
   }
 }
-/* line 10, ../scss/modules/_slideshow.scss */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 1, ../scss/modules/_slideshow.scss */
+  .home-slider {
+    height: 500px;
+  }
+}
+/* line 14, ../scss/modules/_slideshow.scss */
 .home-slider .slide {
   width: 100%;
   height: 100%;
@@ -4266,7 +4335,7 @@ form input[type="submit"] {
   background-size: cover;
   background-position: center center;
 }
-/* line 18, ../scss/modules/_slideshow.scss */
+/* line 22, ../scss/modules/_slideshow.scss */
 .home-slider .slide:after {
   top: 0;
   left: 0;
@@ -4277,27 +4346,34 @@ form input[type="submit"] {
   position: absolute;
   background: rgba(0, 0, 0, 0.6);
 }
-/* line 30, ../scss/modules/_slideshow.scss */
+/* line 34, ../scss/modules/_slideshow.scss */
 .home-slider .flickity-page-dots {
   top: 80px;
   right: 160px;
   text-align: right;
 }
-@media screen and (max-width: 767px) {
-  /* line 30, ../scss/modules/_slideshow.scss */
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  /* line 34, ../scss/modules/_slideshow.scss */
   .home-slider .flickity-page-dots {
     top: 20px;
     right: 20px;
   }
 }
-/* line 40, ../scss/modules/_slideshow.scss */
+@media screen and (min-width: 1024px) and (max-width: 1174px) {
+  /* line 34, ../scss/modules/_slideshow.scss */
+  .home-slider .flickity-page-dots {
+    top: 40px;
+    right: 80px;
+  }
+}
+/* line 49, ../scss/modules/_slideshow.scss */
 .home-slider .flickity-page-dots .dot {
   width: 20px;
   height: 20px;
   background: white;
 }
 @media screen and (max-width: 767px) {
-  /* line 40, ../scss/modules/_slideshow.scss */
+  /* line 49, ../scss/modules/_slideshow.scss */
   .home-slider .flickity-page-dots .dot {
     width: 15px;
     height: 15px;
@@ -4310,26 +4386,50 @@ form input[type="submit"] {
   background-size: cover;
   background-position: center;
 }
+@media screen and (max-width: 767px) {
+  /* line 1, ../scss/modules/_content.scss */
+  .banner {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1174px) {
+  /* line 1, ../scss/modules/_content.scss */
+  .banner {
+    height: 500px;
+  }
+}
 
-/* line 7, ../scss/modules/_content.scss */
+/* line 15, ../scss/modules/_content.scss */
 .content {
   padding: 100px 160px;
   line-height: 1.5;
 }
-/* line 11, ../scss/modules/_content.scss */
+@media screen and (max-width: 767px) {
+  /* line 15, ../scss/modules/_content.scss */
+  .content {
+    padding: 50px 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1174px) {
+  /* line 15, ../scss/modules/_content.scss */
+  .content {
+    padding: 60px 30px;
+  }
+}
+/* line 27, ../scss/modules/_content.scss */
 .content h1 {
   margin: 0;
 }
-/* line 15, ../scss/modules/_content.scss */
+/* line 31, ../scss/modules/_content.scss */
 .content ul {
   list-style: none;
 }
-/* line 19, ../scss/modules/_content.scss */
+/* line 35, ../scss/modules/_content.scss */
 .content ul li:before {
   content: "-";
   padding-right: 10px;
 }
-/* line 26, ../scss/modules/_content.scss */
+/* line 42, ../scss/modules/_content.scss */
 .content .flex-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4337,22 +4437,44 @@ form input[type="submit"] {
   display: flex;
   margin-top: 20px;
 }
-/* line 30, ../scss/modules/_content.scss */
+@media screen and (max-width: 1023px) {
+  /* line 42, ../scss/modules/_content.scss */
+  .content .flex-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/* line 50, ../scss/modules/_content.scss */
 .content .flex-wrapper .column {
   -webkit-box-flex: 1;
   -webkit-flex: 1 42.5%;
       -ms-flex: 1 42.5%;
           flex: 1 42.5%;
 }
-/* line 33, ../scss/modules/_content.scss */
+/* line 53, ../scss/modules/_content.scss */
 .content .flex-wrapper .column:first-child {
   margin-right: 7.5%;
 }
-/* line 37, ../scss/modules/_content.scss */
+@media screen and (max-width: 1023px) {
+  /* line 53, ../scss/modules/_content.scss */
+  .content .flex-wrapper .column:first-child {
+    margin-right: 0;
+  }
+}
+/* line 61, ../scss/modules/_content.scss */
 .content .flex-wrapper .column:last-child {
   margin-left: 7.5%;
 }
-/* line 42, ../scss/modules/_content.scss */
+@media screen and (max-width: 1023px) {
+  /* line 61, ../scss/modules/_content.scss */
+  .content .flex-wrapper .column:last-child {
+    margin-left: 0;
+  }
+}
+/* line 69, ../scss/modules/_content.scss */
 .content .flex-wrapper .fare {
   -webkit-box-flex: 1;
   -webkit-flex: 1 49%;
@@ -4367,7 +4489,7 @@ form input[type="submit"] {
   background-size: cover;
   background-position: center;
 }
-/* line 51, ../scss/modules/_content.scss */
+/* line 78, ../scss/modules/_content.scss */
 .content .flex-wrapper .fare .text {
   z-index: 2;
   left: 0;
@@ -4388,25 +4510,38 @@ form input[type="submit"] {
       -ms-flex-pack: center;
           justify-content: center;
 }
-/* line 62, ../scss/modules/_content.scss */
+/* line 89, ../scss/modules/_content.scss */
 .content .flex-wrapper .fare .text h3 {
   color: white;
   text-align: center;
   text-shadow: 1px 1px 1px black;
 }
-/* line 69, ../scss/modules/_content.scss */
+/* line 96, ../scss/modules/_content.scss */
 .content .flex-wrapper .fare .hover {
   display: none;
 }
-/* line 73, ../scss/modules/_content.scss */
+/* line 100, ../scss/modules/_content.scss */
 .content .flex-wrapper .fare:first-child {
   margin-right: 1%;
 }
-/* line 77, ../scss/modules/_content.scss */
+@media screen and (max-width: 767px) {
+  /* line 100, ../scss/modules/_content.scss */
+  .content .flex-wrapper .fare:first-child {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+/* line 108, ../scss/modules/_content.scss */
 .content .flex-wrapper .fare:last-child {
   margin-left: 1%;
 }
-/* line 81, ../scss/modules/_content.scss */
+@media screen and (max-width: 767px) {
+  /* line 108, ../scss/modules/_content.scss */
+  .content .flex-wrapper .fare:last-child {
+    margin-left: 0;
+  }
+}
+/* line 115, ../scss/modules/_content.scss */
 .content .flex-wrapper .fare:after {
   top: 0;
   left: 0;
@@ -4419,23 +4554,23 @@ form input[type="submit"] {
   -webkit-transition: all .5s ease-in;
           transition: all .5s ease-in;
 }
-/* line 93, ../scss/modules/_content.scss */
+/* line 127, ../scss/modules/_content.scss */
 .content .flex-wrapper .fare:hover:after {
   background: rgba(255, 255, 255, 0.6);
 }
-/* line 97, ../scss/modules/_content.scss */
+/* line 131, ../scss/modules/_content.scss */
 .content .flex-wrapper .fare:hover .hover {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
-/* line 100, ../scss/modules/_content.scss */
+/* line 134, ../scss/modules/_content.scss */
 .content .flex-wrapper .fare:hover .hover h3 {
   color: #391614;
   text-shadow: none;
 }
-/* line 106, ../scss/modules/_content.scss */
+/* line 140, ../scss/modules/_content.scss */
 .content .flex-wrapper .fare:hover .hide-hover {
   display: none;
 }
@@ -4452,6 +4587,12 @@ form input[type="submit"] {
   padding: 0 160px;
   background-color: #90817f;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 1, ../scss/modules/_footer.scss */
+  .main-footer {
+    padding: 0 50px;
+  }
+}
 @media screen and (max-width: 767px) {
   /* line 1, ../scss/modules/_footer.scss */
   .main-footer {
@@ -4463,30 +4604,30 @@ form input[type="submit"] {
             flex-direction: column;
   }
 }
-/* line 14, ../scss/modules/_footer.scss */
+/* line 18, ../scss/modules/_footer.scss */
 .main-footer .footer-container {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
-/* line 18, ../scss/modules/_footer.scss */
+/* line 22, ../scss/modules/_footer.scss */
 .main-footer .footer-logo {
   padding: 20px 0;
 }
-/* line 20, ../scss/modules/_footer.scss */
+/* line 24, ../scss/modules/_footer.scss */
 .main-footer .footer-logo img {
   width: 100%;
   height: auto;
   max-width: 160px;
 }
 @media screen and (max-width: 767px) {
-  /* line 18, ../scss/modules/_footer.scss */
+  /* line 22, ../scss/modules/_footer.scss */
   .main-footer .footer-logo {
     text-align: center;
   }
 }
-/* line 31, ../scss/modules/_footer.scss */
+/* line 35, ../scss/modules/_footer.scss */
 .main-footer .footer-social {
   -webkit-box-flex: 2;
   -webkit-flex: 2;
@@ -4495,7 +4636,7 @@ form input[type="submit"] {
   padding: 15px 0;
   text-align: center;
 }
-/* line 36, ../scss/modules/_footer.scss */
+/* line 40, ../scss/modules/_footer.scss */
 .main-footer .footer-social .social-nav {
   padding: 0;
   margin: 10px auto 0;
@@ -4510,31 +4651,37 @@ form input[type="submit"] {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-/* line 44, ../scss/modules/_footer.scss */
+/* line 48, ../scss/modules/_footer.scss */
 .main-footer .footer-social .social-nav li {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: 2px solid white;
 }
-/* line 50, ../scss/modules/_footer.scss */
+/* line 54, ../scss/modules/_footer.scss */
 .main-footer .footer-social .social-nav li a {
   color: white;
   padding: 10px;
   font-size: 30px;
   line-height: 50px;
 }
-/* line 60, ../scss/modules/_footer.scss */
+/* line 64, ../scss/modules/_footer.scss */
 .main-footer .footer-copyright {
   padding: 65px 0;
 }
 @media screen and (max-width: 767px) {
-  /* line 60, ../scss/modules/_footer.scss */
+  /* line 64, ../scss/modules/_footer.scss */
   .main-footer .footer-copyright {
     padding: 35px 0;
   }
 }
-/* line 66, ../scss/modules/_footer.scss */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 64, ../scss/modules/_footer.scss */
+  .main-footer .footer-copyright {
+    padding: 30px 0;
+  }
+}
+/* line 75, ../scss/modules/_footer.scss */
 .main-footer .footer-copyright p {
   text-align: right;
 }
@@ -4618,6 +4765,12 @@ body {
   font-size: 24px;
   color: #391614;
   font-family: "levenim_mtregular", sans-serif;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 23, ../scss/style.scss */
+  body {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

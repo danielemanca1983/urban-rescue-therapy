@@ -24,4 +24,8 @@ body {
 	font-size: 24px;
 	color: $brand-color;
 	font-family: $font-family-base;
+
+	@include between($tablet, $small-desktop) {
+		font-size: 18px;
+	}
 }

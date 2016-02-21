@@ -5,9 +5,23 @@
 	flex-direction: row;
 	justify-content: space-between;
 
+	@include between($tablet, $small-desktop) {
+		height: 120px;
+		padding: 0 20px;
+	}
+
+	@include between($small-desktop, $medium-desktop) {
+		padding: 0 80px;
+	}
+
+
 	.logo {
 		width: 160px;
 		padding: 20px 0;
+
+		@include between($tablet, $small-desktop) {
+			width: 80px;
+		}
 		
 		img {
 			width: 100%;
@@ -20,8 +34,16 @@
 		padding: 60px 0;
 		list-style-type: none;
 
+		@include between($tablet, $small-desktop) {
+			padding: 30px 0;
+		}
+
 		li {
 			margin-left: 30px;
+
+			@include between($tablet, $small-desktop) {
+				margin-left: 20px;
+			}
 
 			a {
 				color: $brand-color;

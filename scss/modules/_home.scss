@@ -5,6 +5,14 @@
 		&.align-left {
 			text-align: left;
 			padding-left: 160px;
+			@include until($tablet) {
+				text-align: center;
+				padding-left: 0;
+			}
+
+			@include between($tablet, $small-desktop) {
+				padding-left: 30px;
+			}
 		}
 	}
 	.main-content {
@@ -24,6 +32,12 @@
 			-webkit-column-count: 1;
 			column-gap: 0;
 			-webkit-column-gap: 0;
+		}
+
+		@include between($tablet, $small-desktop) {
+			padding: 0 15px;
+			column-gap: 100px;
+			-webkit-column-gap: 100px;
 		}
 	}
 	
@@ -48,7 +62,13 @@
 			position: relative;
 
 			@include until($tablet) {
-				margin-bottom: 20px;
+				min-height: 300px;
+			}
+
+
+			@include between($tablet, $medium-desktop) {
+				flex: 1 46%;
+				min-height: 300px;
 			}
 
 			.treatment-thumb {
@@ -56,6 +76,7 @@
 				background-size: cover;
 				background-position: center;
 			}
+
 
 			.treatment-title {
 				font-size: 30px;

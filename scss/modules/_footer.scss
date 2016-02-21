@@ -6,6 +6,10 @@
 	padding: 0 160px;
 	background-color: $footer-bg;
 
+	@include between($tablet, $small-desktop) {
+		padding: 0 50px;
+	}
+
 	@include until($tablet) {
 		height: auto;
 		flex-direction: column;
@@ -63,6 +67,11 @@
 		@include until($tablet) {
 			padding: 35px 0;
 		}
+
+		@include between($tablet, $small-desktop) {
+			padding: 30px 0;
+		}
+
 		p {
 			text-align: right;
 		}
