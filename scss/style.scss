@@ -1,6 +1,7 @@
 @import 'vendor/normalize';
 @import 'vendor/flickity';
 @import 'vendor/font-awesome';
+@import 'vendor/magnific-popup';
 
 @import 'partials/variables';
 @import 'partials/mixins';
@@ -24,6 +25,10 @@ body {
 	font-size: 24px;
 	color: $brand-color;
 	font-family: $font-family-base;
+
+	&.no-scroll {
+		overflow-y: hidden;
+	}
 
 	@include between($tablet, $small-desktop) {
 		font-size: 18px;

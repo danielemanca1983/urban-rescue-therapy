@@ -15,6 +15,20 @@ this.isDragging=!0,this.dragStartPoint=r.getPointerPoint(e),this.isPreventingCli
 
 $('.home-slider').flickity({
   prevNextButtons: false,
-  contain: true
+  contain: true,
+  autoPlay: true
 });
-//# sourceMappingURL=site.js.map
+
+$('.navicon').on('click',function(event){
+	event.preventDefault();
+
+	$('.main-nav').toggleClass('open-menu');
+	$('#hamburger').toggleClass('open-menu');
+	$('body').toggleClass('no-scroll');
+});
+
+
+$('.open-popup-link').magnificPopup({
+  type:'inline',
+  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+});

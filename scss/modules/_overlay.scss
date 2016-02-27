@@ -1,61 +1,8 @@
-.outer {
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.3s ease-out;
-	position: fixed !important;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	overflow: hidden;
-	background: rgba(0,0,0,0.8);
-	
-	&.active {
-		display: block;
-		z-index: 1000;
-		opacity: 1;
-		visibility: visible;
-	}
-
-	.overlay {		
-		top: 10%;
-		left: 50%;
-		bottom: 5%;	
-		padding: 100px;
-		overflow: hidden;
-		min-width: 780px;
-		background: white;
-		position: absolute;	
-		transform: translate(-50%, 0);
-		
-
-		.close-icon {
-			position: relative;
-			height: 40px;
-			width: 40px;
-			margin: 40px;
-			display: block;
-			float: right;
-			z-index: 1;
-
-			&:before, &:after {
-				position: absolute;
-				height: 2px;
-				width: 40px;
-				display: block;
-				background: $brand-color;
-				content: '';
-				top: 19px;
-				left: 0;
-			}
-
-			&:before {
-				transform: rotate(45deg);
-			}
-
-			&:after {
-				transform: rotate(-45deg);
-			}
-		}
-	}
+.white-popup {
+  position: relative;
+  background: white;
+  padding: 30px;
+  width:auto;
+  max-width: 50%;
+  margin: 20px auto;
 }
