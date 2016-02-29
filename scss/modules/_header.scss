@@ -84,7 +84,7 @@
 					display: block;
 					padding: 20px 0;
 					text-align: center;
-					border-bottom: 1px solid $brand-color;
+					border-top: 1px solid $brand-color;
 				}
 
 				@include between($tablet, $small-desktop) {
@@ -98,6 +98,10 @@
 					text-transform: capitalize;
 					font-family: $font-family-base;	
 
+					&.selected {
+						text-shadow: 1px 1px 2px $brand-color;
+					}
+
 					&:after {
 						content: '';
 					    display: block;
@@ -108,6 +112,9 @@
 					}	
 					&:hover:after {
 						width: 100%;
+						@include until($tablet) {
+							width: 0;
+						}
 					}		
 				}
 			}		   
