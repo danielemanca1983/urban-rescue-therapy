@@ -13,6 +13,7 @@
 	@include until($tablet) {
 		height: auto;
 		flex-direction: column;
+		padding: 0;
 	}
 
 	.footer-container {
@@ -36,6 +37,10 @@
 		flex: 2;
 		padding: 15px 0;
 		text-align: center;
+
+		@include until($tablet) {
+			font-size: 18px;
+		}
 
 		.social-nav {
 			padding: 0;
@@ -74,6 +79,10 @@
 
 		p {
 			text-align: right;
+			@include until($tablet) {
+				text-align: center;
+				font-size: 18px;
+			}
 		}
 	}
 }
