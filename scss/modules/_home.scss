@@ -16,14 +16,13 @@
 		}
 	}
 	.main-content {
-		font-size: 24px;
 		line-height: 1.5;
 		max-width: 1400px;
 		margin: 0 auto;
 		column-count: 2;
 		-webkit-column-count: 2;
-		column-gap: 250px;
-		-webkit-column-gap: 250px;
+		column-gap: 150px;
+		-webkit-column-gap: 150px;
 
 		@include until($tablet) {
 			padding: 0 20px;
@@ -44,6 +43,7 @@
 }
 
 .treatments {
+	padding-bottom: 50px;
 	h2 {
 		text-align: center;
 	}
@@ -57,7 +57,7 @@
 
 		.treatment {
 			flex: 1 23%;
-			margin: 0 10px 80px;
+			margin: 0 10px 60px;
 			text-align: center;
 			position: relative;
 
@@ -72,9 +72,42 @@
 			}
 
 			.treatment-thumb {
-				height: 310px;
-				background-size: cover;
-				background-position: center;
+				height: 250px;
+				position: relative;
+				overflow: hidden;
+				transition: all 300ms ease-out;
+
+				&:hover .excerpt {
+					height: 100%;
+					width: 100%;
+					display: block;
+					text-align: center;
+				}
+				
+				img {
+					width: 100%;
+					height: auto;
+					max-height: 250px;
+				}
+
+				.excerpt {
+					background-color: rgba(57,22,20,0.7);
+				    position: absolute;
+				    color: white;
+				    z-index: 100;
+				    left: 0;
+				    right: 0;
+				    top: 0;
+				    bottom: 0;
+					display: none;
+					opacity: 0;
+					line-height: 200px;
+					text-align: center;
+					transition: opacity .3s ease-out;
+					&:hover {
+						opacity: 1;
+					}
+				}
 			}
 
 
