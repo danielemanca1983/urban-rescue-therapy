@@ -50,25 +50,34 @@
 			justify-content: space-between;			
 
 			li {
-				transition: rotate .5s ease-out;
-				&:hover {
-			    	transform: rotate(180deg);
-			    }	
 				a {
 					display: inline-block;
 				    position: relative;
 				    cursor: pointer;
-				    width: 30px;
-				    height: 30px;
+				    width: 40px;
+				    height: 40px;
 				    text-decoration: none;
 				    text-align: center;
 				    color: white;
-				    font-size: 20px;
-				    border: 2px solid white;
+				    font-size: 30px;
 				    font-weight: normal;
-				    line-height: 35px;
-				    border-radius: 50%;		
+				    line-height: 45px;
+				    vertical-align: middle;	
+				    font-family: "fontawesome";
 				}
+
+				a[href*="facebook"]:before {
+		          content: "\f09a";
+		        }
+
+		        a[href*="google"]:before {
+		          content: "\f0d5";
+		        }
+
+		        a[href*="twitter"]:before {		          
+		          content: "\f099";
+		        }
+
 			}
 		}
 	}
